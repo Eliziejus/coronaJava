@@ -20,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         Button login=findViewById(R.id.login);//susiejamas vaizde esantis elementa su kodu
         final EditText username=findViewById(R.id.username);
         final EditText password=findViewById(R.id.password);
-
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,14 +27,17 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(goToRegistration);
             }
         });
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // cia rasomas kodas kuris vykdomas paspaudus mygtuka
-               /* Toast.makeText(LoginActivity.this,"prisijungimo vardas:"+
-                        username.getText().toString() + "\n" + "slaptazodis:" +
-                        password.getText().toString(), Toast.LENGTH_LONG).show();*/
+                // Kuriamas User klases objektas
+                //  public User(String username, String password)
+                User user=new User(username.getText().toString(),password.getText().toString());
+
+                Toast.makeText(LoginActivity.this,"prisijungimo vardas:"+
+                        user.getUsername() + "\n" + "slaptazodis:" +
+                        user.getPassword(), Toast.LENGTH_LONG).show();
                 if (Validation.isValidUsername(username.getText().toString())){
                     //ketinimas pereiti i paieskos langa                is kur            į kur
                     Intent goToSeachActivity=new Intent(LoginActivity.this,SeachActivity.class);
