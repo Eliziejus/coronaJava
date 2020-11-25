@@ -29,7 +29,7 @@ public class Registration extends AppCompatActivity {
 
 
                 if (Validation.isValidUsername(username.getText().toString()) &&
-                        Validation.isValidPassword(email.getText().toString()) &&
+                        Validation.isValidEmail(email.getText().toString()) &&
                         Validation.isValidPassword(password.getText().toString()))  {
 
                     Intent goToLoginActivity = new Intent(Registration.this, LoginActivity.class);
