@@ -10,7 +10,7 @@ public class User {
     private String email;
 
     private SharedPreferences sharedPreferences;
-    private static final String PREFERENCES_PACKAGE_NAME="com.corona.coronazp20t";
+    private static final String PREFERENCES_PACKAGE_NAME="com.corona.coronazp20-2";
     private static final String USERNAME_KEY="username";
     private static final String PASSWORD_KEY="password";
     private static final String REMEMBER_ME_KEY="rememberMe";
